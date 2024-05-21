@@ -11,7 +11,7 @@ var_dump( boolval($b)   ); // false
 
 var_dump( !$a ); // false
 
-// Operator && zahtijeva da su svi izrazi istiniti kako bi vratio true
+//Operator && zahtijeva da su svi izrazi istiniti kako bi vratio true
 var_dump($a && $b); // false
 var_dump( ($a > $b) && ($b == $a) ); // false
 
@@ -25,3 +25,16 @@ var_dump(true || false); // true
 var_dump(false || true); // true
 var_dump(true || true); // true
 var_dump(false || false); // false
+
+// Vrijednosti koje vracaju FALSE
+$var = false;
+$var = 0;
+$var = 0.0;
+$var = '';
+$var = '0';
+$var = [];
+$var = NULL;
+
+if ( '0' ) {
+    echo 'Izraz je istinit.';
+}
