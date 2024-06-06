@@ -49,6 +49,8 @@
 
 <?php
 
+// Skripta povezivanja podataka sa words.json datotekom
+
 const FILE_PATH = __DIR__ . '/words.json';
 $postData = $_POST;
 $errors = [];
@@ -58,6 +60,8 @@ if (file_exists(FILE_PATH)) {
     $words = file_get_contents(FILE_PATH);
     $words = json_decode($words, true);
 }
+
+// Skripta koja kalkulira samoglasnike
 
 function countVowels(string $text): int
 {
@@ -160,6 +164,9 @@ if (!empty($postData["word"])) {
                 if (!empty($words)) {
                     foreach ($words as $word) {
                 ?>
+
+                        // Skripta koja dodaje podatke u array
+
                         <tr>
                             <td><?= $word["word"] ?></td>
                             <td><?= $word["length"] ?></td>
