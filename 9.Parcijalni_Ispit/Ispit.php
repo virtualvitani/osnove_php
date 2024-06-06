@@ -165,8 +165,6 @@ if (!empty($postData["word"])) {
                     foreach ($words as $word) {
                 ?>
 
-                        // Skripta koja dodaje podatke u array
-
                         <tr>
                             <td><?= $word["word"] ?></td>
                             <td><?= $word["length"] ?></td>
