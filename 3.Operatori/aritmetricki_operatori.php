@@ -28,4 +28,3 @@
 
     // Konkatenacija vise stringova
     var_dump($a.$b.$c);
-    var_dump('sdfsdfs');
