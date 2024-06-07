@@ -4,48 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parcijalni Ispit - Osnove PHP-a</title>
-    <style>
-        body {
-            background-image: url(https://i.szalas.hu/hotels/1452964/original/38257997.jpg);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
-            margin: 0;
-        }
-    </style>
 </head>
 <body>
-<style>
-
-        input{
-            text-align: left;
-            margin: 10px;
-            padding: 10px 20px 10px 20px;
-            border-radius: 20px;
-            position: sticky;
-            color: red;
-        }
-
-        table{
-            border: none;
-            margin: 30px;
-        }
-
-        th{
-            padding: 10px 20px 10px 20px;
-            border-radius: 20px;
-            border: solid 4px;
-        }
-
-        td{
-            padding: 10px;
-            border-radius: 50px;
-            border: solid 2px;
-            color: black;
-        }
-
-    </style>
 
 <?php
 
@@ -66,16 +26,12 @@ if (file_exists(FILE_PATH)) {
 function countVowels(string $text): int
 {
     $cnt = 0;
-    $cnt += substr_count($text, 'a');
-    $cnt += substr_count($text, 'e');
-    $cnt += substr_count($text, 'i');
-    $cnt += substr_count($text, 'o');
-    $cnt += substr_count($text, 'u');
-    $cnt += substr_count($text, 'A');
-    $cnt += substr_count($text, 'E');
-    $cnt += substr_count($text, 'I');
-    $cnt += substr_count($text, 'O');
-    $cnt += substr_count($text, 'U');
+    $vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+
+    foreach ($vowels as $vowel) {
+        $cnt += substr_count($text, $vowel);
+    }
+
     return $cnt;
 }
 
